@@ -8,13 +8,14 @@ namespace HashTable
 {
     class HashTableBuilder
     {
-         public string Sentence { get; set; } = "To be or not to be";
-         public string WordToCheck { get; set; } = "be";
-          public int FindFrequencyOfWord()
+        public string Sentence { get; set; } = "To be or not to be";
+        public string WordToCheck { get; set; } = "be";
+       
+        public int FindFrequencyOfWord()
         {
             string[] words = Sentence.Split(' ');
             MyMappingNode<string, int> map = new MyMappingNode<string, int>(10);
-             foreach (string word in words)
+            foreach (string word in words)
             {
                 if (map.GetValue(word) == 0)
                     map.AddValue(word, 1);
